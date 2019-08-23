@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
         shadowRadius: 0,
         shadowOpacity: 1,
         color: "#4a4a4a",
-        display: "block",
         padding: 0.5,
         marginTop: 0.5,
     },
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     name: {
-        fontWeight: 600,
+        fontWeight: "600",
         marginRight: 0.5,
         marginLeft: 0.5,
     },

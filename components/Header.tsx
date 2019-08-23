@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
         paddingLeft: 30,
         paddingTop: 10,
         fontSize: 30,
-        fontWeight: 600,
+        fontWeight: "600",
     },
 });

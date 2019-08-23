@@ -20,40 +20,40 @@ interface Props {
 
 export class App extends React.Component<Props> {
     render() {
-        // const {app_actions, name} = this.props;
+        const {app_actions, name} = this.props;
 
         let input;
         return (
             <View style={styles.body}>
                 <Text>React-native build test</Text>
                 {/*<GlobalStyle/>*/}
-                {/*<Header/>*/}
-                {/*<View style={styles.container}>*/}
-                {/*    <UserField>*/}
-                {/*        {!name &&*/}
-                {/*        <form*/}
-                {/*            onSubmit={(e) => {*/}
-                {/*                e.preventDefault();*/}
-                {/*                if (input) {*/}
-                {/*                    app_actions.login(input);*/}
-                {/*                    input = '';*/}
-                {/*                } else {*/}
-                {/*                    return*/}
-                {/*                }*/}
-                {/*            }}*/}
-                {/*        >*/}
-                {/*            <Input onChange={(e) => {*/}
-                {/*                input = e.target.value;*/}
-                {/*            }} placeholder="ユーザー名"/>*/}
-                {/*            <Button type="submit">ログイン</Button>*/}
-                {/*        </form>*/}
-                {/*        }*/}
-                {/*        {*/}
-                {/*            name && <ChatBox/>*/}
-                {/*        }*/}
-                {/*    </UserField>*/}
-                {/*    <MessageList/>*/}
-                {/*</View>*/}
+                <Header/>
+                <View style={styles.container}>
+                    <UserField>
+                        {/*{!name &&*/}
+                        {/*<form*/}
+                        {/*    onSubmit={(e) => {*/}
+                        {/*        e.preventDefault();*/}
+                        {/*        if (input) {*/}
+                        {/*            app_actions.login(input);*/}
+                        {/*            input = '';*/}
+                        {/*        } else {*/}
+                        {/*            return*/}
+                        {/*        }*/}
+                        {/*    }}*/}
+                        {/*>*/}
+                        {/*    <Input onChange={(e) => {*/}
+                        {/*        input = e.target.value;*/}
+                        {/*    }} placeholder="ユーザー名"/>*/}
+                        {/*    <Button type="submit">ログイン</Button>*/}
+                        {/*</form>*/}
+                        {/*}*/}
+                        {/*{*/}
+                        {/*    name && <ChatBox/>*/}
+                        {/*}*/}
+                    </UserField>
+                    <MessageList/>
+                </View>
             </View>
         );
     }
