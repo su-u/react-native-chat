@@ -5,8 +5,22 @@ import * as React from "react";
 import {Provider} from "react-redux";
 import App from "./containers/App";
 
-export default ({store}) => (
-    <Provider store={store}>
-        <App/>
-    </Provider>
-);
+import createFinalStore from "./stores";
+
+const store = createFinalStore();
+
+// export default  (
+//     <Provider store={store}>
+//         <App/>
+//     </Provider>
+// );
+export default class reduxApp extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <App />
+            </Provider>
+        )
+    }
+}
+

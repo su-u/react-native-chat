@@ -1,8 +1,7 @@
 import * as React from "react";
 import {bindActionCreators} from "redux";
 import {connect, Dispatch} from "react-redux";
-import styled from 'styled-components';
-import {StyleSheet, Image, View} from 'react-native';
+import {StyleSheet, Image, View, Text} from "react-native";
 
 import * as Actions from "../actions/app";
 import ChatBox from "./ChatBox";
@@ -21,39 +20,40 @@ interface Props {
 
 export class App extends React.Component<Props> {
     render() {
-        const {app_actions, name} = this.props;
+        // const {app_actions, name} = this.props;
 
         let input;
         return (
             <View style={styles.body}>
-                <GlobalStyle/>
-                <Header/>
-                <View style={styles.container}>
-                    <UserField>
-                        {!name &&
-                        <form
-                            onSubmit={(e) => {
-                                e.preventDefault();
-                                if (input) {
-                                    app_actions.login(input);
-                                    input = '';
-                                } else {
-                                    return
-                                }
-                            }}
-                        >
-                            <Input onChange={(e) => {
-                                input = e.target.value;
-                            }} placeholder="ユーザー名"/>
-                            <Button type="submit">ログイン</Button>
-                        </form>
-                        }
-                        {
-                            name && <ChatBox/>
-                        }
-                    </UserField>
-                    <MessageList/>
-                </View>
+                <Text>React-native build test</Text>
+                {/*<GlobalStyle/>*/}
+                {/*<Header/>*/}
+                {/*<View style={styles.container}>*/}
+                {/*    <UserField>*/}
+                {/*        {!name &&*/}
+                {/*        <form*/}
+                {/*            onSubmit={(e) => {*/}
+                {/*                e.preventDefault();*/}
+                {/*                if (input) {*/}
+                {/*                    app_actions.login(input);*/}
+                {/*                    input = '';*/}
+                {/*                } else {*/}
+                {/*                    return*/}
+                {/*                }*/}
+                {/*            }}*/}
+                {/*        >*/}
+                {/*            <Input onChange={(e) => {*/}
+                {/*                input = e.target.value;*/}
+                {/*            }} placeholder="ユーザー名"/>*/}
+                {/*            <Button type="submit">ログイン</Button>*/}
+                {/*        </form>*/}
+                {/*        }*/}
+                {/*        {*/}
+                {/*            name && <ChatBox/>*/}
+                {/*        }*/}
+                {/*    </UserField>*/}
+                {/*    <MessageList/>*/}
+                {/*</View>*/}
             </View>
         );
     }
@@ -78,15 +78,6 @@ export default connect(
     mapDispatchToProps,
 )(App);
 
-const Container = StyleSheet.div`
-    max-width: 800px;
-    margin: 0 auto;
-`;
-
-const Body = styled.div`
-  margin: 0;
-  padding: 0;
-`;
 
 const styles = StyleSheet.create({
     body: {

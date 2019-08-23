@@ -2,7 +2,7 @@ import * as React from "react"
 import {bindActionCreators} from "redux";
 import * as Actions from "../actions/app"
 import {connect, Dispatch} from "react-redux";
-import styled from 'styled-components';
+import {StyleSheet} from "react-native";
 
 import Input from "../components/Input";
 import Button from "../components/Button";
