@@ -1,7 +1,6 @@
 import * as React from "react"
 import {StyleSheet, Text, View} from "react-native";
 
-
 interface Props {
     key: string
     name: string;
@@ -11,7 +10,6 @@ interface Props {
 
 export default class Message extends React.Component<Props> {
     render() {
-
         return (
             <View style={styles.messageContainer}>
                 <View style={styles.topContainer}>
