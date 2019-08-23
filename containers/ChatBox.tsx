@@ -2,7 +2,7 @@ import * as React from "react"
 import {bindActionCreators} from "redux";
 import * as Actions from "../actions/app"
 import {connect, Dispatch} from "react-redux";
-import {StyleSheet} from "react-native";
+import {StyleSheet, View, Text} from "react-native";
 
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -20,9 +20,9 @@ export class ChatBox extends React.Component<Props> {
 
         return (
             <UserField>
-                <p>ようこそ {name} さん</p>
+                <Text>ようこそ {name} さん</Text>
                 <form>
-                    <DisableInput/>
+                    <Input/>
                     <Input type="text" onChange={(e) => {
                         input = e.target.value;
                     }} placeholder="メッセージ"
@@ -74,8 +74,3 @@ export default connect(
 )(ChatBox);
 
 
-const DisableInput = styled.input.attrs({
-    type: 'text',
-})`
-    display: none;
-`;
