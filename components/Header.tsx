@@ -1,25 +1,27 @@
 import * as React from "react";
-import styled from 'styled-components';
+import {View, Text, StyleSheet} from "react-native";
 
 export default class Message extends React.Component {
     render() {
         return (
-            <Header><Title>チャット</Title></Header>
+            <View style={styles.header}><Text style={styles.title}>チャット</Text></View>
         );
     }
 }
-const Header = styled.div`
-    top: 0;
-    width: 100%;
-    background-color: #202124;
-    height: 60px;
-    color: white;
-    display: flex;
-`;
 
-const Title = styled.div`
-    padding-left: 30px;
-    padding-top: 10px;
-    font-weight: 600;
-    font-size: 30px;
-`;
+const styles = StyleSheet.create({
+    header: {
+        top: 0,
+        flex: 1,
+        backgroundColor: "#202124",
+        height: 60,
+        color: "#FFFFFF",
+        flexDirection: 'row',
+    },
+    title: {
+        paddingLeft: 30,
+        paddingTop: 10,
+        fontSize: 30,
+        fontWeight: 600,
+    },
+});
