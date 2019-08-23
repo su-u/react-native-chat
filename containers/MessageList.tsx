@@ -2,6 +2,7 @@ import * as React from "react";
 import {bindActionCreators} from "redux";
 import * as Actions from "../actions/app";
 import {connect, Dispatch} from "react-redux";
+import {View} from "react-native";
 
 import Message from "../components/message";
 
@@ -20,13 +21,13 @@ export class MessageList extends React.Component<Props> {
         const {message_list} = this.props;
 
         return (
-            <div>
+            <View>
                 {message_list &&
                     message_list.map(message => (
                         <Message key={message.id} name={message.name} message={message.message}
                                  timestamp={message.date}/>
                     ))}
-            </div>
+            </View>
         );
     }
 }
